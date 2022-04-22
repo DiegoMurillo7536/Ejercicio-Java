@@ -64,6 +64,30 @@ public class Ejercicio_1_Algoritmia {
 		case 19:
 			Ejercicio_19();
 			break;
+		case 20:
+			Ejercicio_20();
+			break;
+		case 21:
+			Ejercicio_21();
+			break;
+		case 22:
+			Ejercicio_22();
+			break;
+		case 23:
+			Ejercicio_23();
+			break;
+		case 24:
+			Ejercicio_24();
+			break;
+		case 26:
+			Ejercicio_26();
+			break;
+		case 28:
+			Ejercicio_28();
+			break;
+		case 30:
+			Ejercicio_30();
+			break;
 		default:
 			break;
 		}
@@ -320,7 +344,116 @@ public class Ejercicio_1_Algoritmia {
 
 		
 	}	
-}
+	static void Ejercicio_20(){
+	/*Calcule qué tanto por ciento anual cobraron por un préstamo de Bolívares X, si
+	se pagaron Bolívares  Y de intereses en 4 años. La fórmula del interés es*/	
+		System.out.println("Escriba el valor del prestamo");
+		int x=lapiz.nextInt();
+		System.out.println("Escriba el valor de intereses");
+		int y=lapiz.nextInt();
+		System.out.println("El valor fue de:"+(x*4*y)/100);
+	}
+	
+	static void Ejercicio_21(){
+	/*Un mayorista compra a un agricultor un lote de X naranjas a Bs. Y la docena.
+	Después de vender  todas las naranjas a los detallistas, obtiene Bs. K. Calcular
+	el porcentaje de ganancia obtenida en la  inversión. Pruebe su programa con los
+	 siguientes valores: X=48000, Y=6, K=42000 para obtener 75%  como resultado. */
+		int precio=11;
+		int x=48000*precio; int y=6; int k=42000;
+		System.out.println("La ganancia fue de "+(x*y)/k+"%");
+	}
+	
+	static void Ejercicio_22(){
+	/*Un comerciante de computadores ofrece P precio por compra al contado ó 12
+	 cuotas de T Bolívares  cada una. Desarrolle un programa para calcular
+	 y mostrar cuál es el porcentaje que se cobra por el  recargo en el pago
+	 del computador por cuotas. */
+	System.out.println("Ingresa un numero");
+	int Precio=lapiz.nextInt();
+	int Cuotas=Precio/12;
+	System.out.println("Lo que se debe pagar en cada cuota es de:"+Cuotas);
+	}
+	
+	static void Ejercicio_23() {
+	/*Suponga que a partir de una Tonelada de maíz una planta productora obtiene M kilogramos de
+	harina y N litros de aceite. La planta vende cada bulto de 24 paquetes de un kilogramo de harina en
+	Bs. B1 y cada caja de 15 envases de aceite en Bs. B2. Suponiendo que la planta vende todo lo que
+	produce, calcular el ingreso total por la venta de cada tonelada de maíz, sabiendo además que cada
+	kilogramo de harina y cada litro de aceite que restan del embalaje se venden al detal a los precios de
+	Bs. B3 y Bs. B4 respectivamente. Pruebe su algoritmo o programa con los sig. Valores: M=452,
+	N=197, B1=132, B2= 180, B3= 7,50 y B4= 14,50. Respuesta: 4895*/	
+	int pago_harina=452*24;
+	int pago_aceite=197*15;
+	int b1=132;
+	int b2=180;
+	double b3=7.50;
+	double b4=14.50;
+	System.out.println((pago_harina*b1)+(pago_aceite*b2)-(b3*b4));
+	}
+	
+	static void Ejercicio_24(){
+	int cantidad=lapiz.nextInt();
+	if(cantidad>7000){
+	System.out.println("Se invirtió y tendrá:"+cantidad*0.08+" de ganancia");
+	}else {
+	System.out.println("No se invirtió");
+		}
+	}
+	
+	static void Ejercicio_26(){
+	int a=lapiz.nextInt();
+	int b=lapiz.nextInt();
+	int c=lapiz.nextInt();
+	int d=lapiz.nextInt();
+	if (d<=0) {
+	System.out.println(Math.pow((a-c),2));	
+	}else {
+		System.out.println((Math.pow((a-b),3))/d);	
+
+		}
+	}
+	
+	static void Ejercicio_28(){
+		System.out.println("Inserte dos números");
+		int a=lapiz.nextInt();
+		int b=lapiz.nextInt();
+		double triangulo=(a*b)/2;
+		double circulo= a*Math.pow(b,2);
+		int rectangulo=a*b;
+		System.out.println("Esoja un numero del 1-3");
+		int opcion=lapiz.nextInt();
+		switch (opcion) {
+		case 1:
+			System.out.println("La area de un triangulo es de:"+triangulo);
+			break;
+		case 2:
+			System.out.println("La area de un circulo es de:"+circulo);
+			break;
+		case 3:
+			System.out.println("La area de un rectangulo es de:"+rectangulo);
+			break;
+		default:
+			break;
+		}
+	}
+	
+	static void Ejercicio_30(){
+		int a=2000;int b=300;int c=60;int d=2;
+		int n=a+b+c+d;
+		if (n>2362) {
+			n=2400;
+			System.out.println("Número redondeado a:"+n);
+		} else{
+			n=2300;
+			System.out.println("Número redondeado a:"+n);
+
+		}
+	}
+	
+	
+	}
+
 
 	
 	
