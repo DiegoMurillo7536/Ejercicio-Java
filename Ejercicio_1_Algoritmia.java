@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.time.*;
+
 public class Ejercicio_1_Algoritmia {
 	static Scanner lapiz= new Scanner(System.in);
 	
@@ -142,6 +142,24 @@ public class Ejercicio_1_Algoritmia {
 			break;
 		case 67:
 			Ejercicio_67();
+			break;
+		case 69:
+			Ejercicio_69();
+			break;
+		case 71:
+			Ejercicio_71();
+			break;
+		case 82:
+			Ejercicio_82();
+			break;
+		case 83:
+			Ejercicio_83();
+			break;
+		case 85:
+			Ejercicio_85();
+			break;
+		case 86:
+			Ejercicio_86();
 			break;
 		default:
 			break;
@@ -903,8 +921,284 @@ public class Ejercicio_1_Algoritmia {
 	}
 	
 	static void Ejercicio_69(){
-	int amigo_a;
+	int amigo_a=1184; int amigo_b=1210;int suma=0;
+	for (int i =1; i<amigo_a; i++) {
+		if (amigo_a%i==0) {
+			suma=suma+i;
+		}
+	  }
+	if (suma==amigo_b) {
+		suma=0;
+		for (int i = 1; i < amigo_b; i++) {
+			if (amigo_b%i==0) {
+				suma=suma+i;
+			}
+		}
+	if (suma==amigo_a) {
+		System.out.println("Amigos por siempre");
+	}else{
+		System.out.println("Son enemigos");
+	 }
+	}else{
+		System.out.println("Son enemigos");
+	 }
 	}
+	
+	static void Ejercicio_71(){
+		int h_tachira=150;
+		int h_dc=200;
+		int h_pais=h_tachira+h_dc+10000;
+		double grupo_mujeres,grupo_hombres;
+		System.out.println("Huerfanos en táchira:"+h_tachira+" respecto a:"+h_pais+" en todo el país");
+		System.out.println("Huerfanos en el Distrito Capital:"+h_dc+" respecto a:"+h_pais+" en todo el país");
+		System.out.println("Escribe el grupo que deseas ver");
+		int opcion=lapiz.nextInt();
+		switch (1) {
+		case 1:
+			int grupo_1=20;
+			System.out.println("Cantidad de niños menores de un año:"+grupo_1);
+			  grupo_mujeres=grupo_1*0.6;
+			System.out.println("Cantidad de mujeres en el grupo 1:"+grupo_mujeres);
+			 grupo_hombres=grupo_1*0.4;
+			System.out.println("Cantidad de hombres en el grupo 1:"+grupo_hombres);
+			
+			break;
+		case 2:
+			int grupo_2=60;
+			System.out.println("Cantidad de niños entre 1 y 3 años:"+grupo_2);
+			 grupo_mujeres=grupo_2*0.3;
+			System.out.println("Cantidad de mujeres en el grupo 2:"+grupo_mujeres);
+			grupo_hombres=grupo_2*0.7;
+			System.out.println("Cantidad de hombres en el grupo 2:"+grupo_hombres);
+			break;
+		case 3:
+			int grupo_3=100;
+			System.out.println("Cantidad de niños entre 4 y 6 años:"+grupo_3);
+			 grupo_mujeres=grupo_3*0.3;
+			System.out.println("Cantidad de mujeres en el grupo 3:"+grupo_mujeres);
+			grupo_hombres=grupo_3*0.7;
+			System.out.println("Cantidad de hombres en el grupo 3:"+grupo_hombres);
+			break;
+		case 4:
+			int grupo_4=170;
+			System.out.println("Cantidad de niños mayores de 6 años:"+grupo_4);
+			 grupo_mujeres=grupo_4*0.3;
+			System.out.println("Cantidad de mujeres en el grupo 4:"+grupo_mujeres);
+			grupo_hombres=grupo_4*0.7;
+			System.out.println("Cantidad de hombres en el grupo 4:"+grupo_hombres);
+			break;
+		default:
+			break;
+		}
+	}
+	
+	static void Ejercicio_82(){
+		int maria[]={16,14,15,13,9};
+		double total_maria=0;
+		
+		for (int i = 0; i < maria.length; i++) {
+			total_maria+=maria[i];
+		}
+		System.out.println("El promedio de maria es:"+total_maria/5);
+		
+		int juanca[]={10,9,7,11,14};
+		double total_juanca=0;
+		
+		for (int i = 0; i < juanca.length; i++) {
+			total_juanca+=juanca[i];
+		}
+		System.out.println("El promedio de juanca es:"+total_juanca/5);
+		
+		int josefina[]={13,12,15,17,13};
+		double total_josefina=0;
+		
+		for (int i = 0; i < josefina.length; i++) {
+			total_josefina+=josefina[i];
+		}
+		System.out.println("El promedio de josefina es:"+total_josefina/5);
+		
+		int joseluis[]={7,11,10,8,17};
+		double total_joseluis=0;
+		for (int i = 0; i < joseluis.length; i++) {
+			total_joseluis+=joseluis[i];
+		}
+		System.out.println("El promedio de joseluis es:"+total_joseluis);
+		
+		double suma_promedio=0;
+		for (int i = 0; i <5; i++) {
+			suma_promedio=total_maria+total_juanca+total_josefina+total_joseluis;
+		}
+		double total_promedios=suma_promedio/20;
+		System.out.println("Promedio de la clase"+total_promedios);
+		
+		System.out.println("Ahora elige a una persona para saber si cumple con el promedio o no");
+		System.out.println("1.Maria");
+		System.out.println("2.Janca");
+		System.out.println("3.Josefina");
+		System.out.println("4.Jose Luis");
+		int opcion=lapiz.nextInt();
+		switch (opcion) {
+		case 1:
+			if (total_maria/5>total_promedios) {
+				System.out.println("Maria superó el promedio");
+			} else {
+				System.out.println("Maria no pasó el promedio");
+			}
+			break;
+		case 2:
+			if (total_juanca/5>total_promedios) {
+				System.out.println("Juanca superó el promedio");
+				System.out.println(total_juanca);
+			} else {
+				System.out.println("Juanca no pasó el promedio");
+			}
+			break;
+		case 3:
+			if (total_josefina/5>total_promedios) {
+				System.out.println("Josefa superó el promedio");
+			} else {
+				System.out.println("Josefa no pasó el promedio");
+			}
+			break;
+		case 4:
+			if (total_joseluis/5>total_promedios) {
+				System.out.println("Jose superó el promedio");
+			} else {
+				System.out.println("Jose no pasó el promedio");
+			}
+			break;
+
+		default:
+			break;
+		}
+
+	}
+	
+	static void Ejercicio_83(){
+	String ct[]={"Medellin","Cartagena","Barranquilla","Bogota"};
+	int h[]= {20,10,30,15};
+	int tr[]= {25,40,35,15};
+	int mayor=tr[0];
+	String sitio_mayor=ct[0];
+	int mayor_h=h[0];
+	for (int i = 0; i < tr.length; i++) {
+		if (tr[i]>mayor) {
+			mayor=tr[i];
+			sitio_mayor=ct[i];
+		}
+	}
+	System.out.println("Centro que cuenta con más sitios turísticos es:"+sitio_mayor+" y tiene "+mayor+" restaurantes");
+	for (int i = 0; i < h.length; i++) {
+		if (h[i]>mayor_h) {
+			mayor_h=h[i];
+			sitio_mayor=ct[i];
+		}
+	}
+	System.out.println("Centro que cuenta con más habitaciones es:"+sitio_mayor+" y tiene "+mayor_h+" habitaciones");
+	
+	System.out.println("Escriba al lugar que quiere buscar");
+	System.out.println("(1)Medellin (2)Cartagena (3)Barranquilla (4)Bogotá");
+	String opcion=lapiz.next();
+	
+	switch (opcion) {
+	case "Medellin":
+		for (int i = 0; i <4; i++) {
+			if (h[i]==20) {	
+				System.out.println(ct[i]+":"+h[i]+" Habitaciones");
+			}
+		}
+		break;
+		
+	case "Cartagena":
+		for (int i = 0; i <4; i++) {
+			if (h[i]==10) {	
+				System.out.println(ct[i]+":"+h[i]+" Habitaciones");
+			}
+		}
+		break;
+		
+	case "Barranquilla":
+		for (int i = 0; i <4; i++) {
+			if (h[i]==30) {	
+				System.out.println(ct[i]+":"+h[i]+" Habitaciones");
+			}
+		}
+		break;
+		
+	case "Bogotá":
+		for (int i = 0; i <4; i++) {
+			if (h[i]==15) {	
+				System.out.println(ct[i]+":"+h[i]+" Habitaciones");
+			}
+		}
+		break;
+	
+	
+
+	default:
+		System.out.println("No se encontró la ciudad, vuelva a intentarlo");
+		break;
+	}
+		
+	}
+	static void Ejercicio_85(){
+	int	extension[]= {30,45,32,60};
+	int	precio[]= {30000,45000,32000,60000};
+	System.out.println("Ingresa cuántos metros buscas");
+	int num_extension=lapiz.nextInt();
+	System.out.println("Ingresa el precio que deseas");
+	int num_precio=lapiz.nextInt();
+	
+	for (int i = 0; i < extension.length; i++) {
+		if ((num_extension==extension[i]) &&(num_precio==precio[i])) {
+			System.out.println("Lo sentimos, no hay ninguno,sin embargo están los siguientes:");
+			
+		} else {
+			System.out.println("Extensión:"+extension[i]+",el cual tiene un precio de "+precio[i]);
+		}
+		
+	}
+	System.out.println("¿Desea renovar el contrato?Responda si o no");
+	String respuesta=lapiz.next(); 
+	
+	if (respuesta=="no") {
+			int extensión[]={40,55,42,70};
+			int precio2[]= {40000,55000,42000,70000};
+			System.out.println("Arreglos actualizados");
+	}
+	
+	}
+	
+	static void Ejercicio_86(){
+		double edades=0;
+		String nombres[]= {"Diego Murillo","Leidy Martinez","Julian Mora","Gian Berbesi"};
+		String sexo[]={"Masculino","Femenino","Masculino","Masculino"};
+		int edad[]={17,18,16,15};
+		for (int i = 0; i < edad.length; i++) {
+		edades=+edad[i];
+		}
+		System.out.println("Promedio de edades:"+edades);
+		for (int i = 0; i < edad.length; i++) {
+			if (edad[i]==15) {
+				System.out.println("Profesor más joven:"+nombres[i]);
+			}
+			if(edad[i]==18){
+				System.out.println("Profesor más viejo:"+nombres[i]);
+			}
+		}
+		for (int i = 0; i < edad.length; i++) {
+			if (edad[i]>15) {
+				System.out.println("Profesores con mayor edad: "+nombres[i]);
+			}
+		}
+		for (int i = 0; i < edad.length; i++) {
+			if (edad[i]<16) {
+				System.out.println("Profesores con menor edad: "+nombres[i]);
+			}
+		}
+	}
+	
+	
 	
 	}
 	
